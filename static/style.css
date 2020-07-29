@@ -1,0 +1,11 @@
+body {
+    background-color: snow;
+}
+
+.list-group-item {
+    border: none;
+}
+
+.publisher {
+    color: green;
+}

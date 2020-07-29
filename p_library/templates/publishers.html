@@ -1,0 +1,17 @@
+<head>
+    <title>Издатели</title>
+</head>
+{% extends 'base.html' %}
+{% block content %}
+    <ul class="list-group">
+    {% for publisher in publishers %}
+        <li class="list-group-item">📚 <b class="publisher">{{ publisher.title }} (книг: {{ publisher.book_publisher.all|length }})</b>
+        <ul class="list-group">
+            {% for book in publisher.book_publisher.all %}
+            <li class="list-group-item">📖 {{ book.title }} - {{ book.year_release }}</li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

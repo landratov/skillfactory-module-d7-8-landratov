@@ -1,0 +1,11 @@
+<head>
+	<title>Список авторов</title>
+</head>
+{% extends 'base.html' %}
+{% block content %}
+	<ul>
+		{% for author in object_list %}
+		    <li><a href="{{ author.id }}/">{{ author.full_name }}</a></li>
+		{% endfor %}
+	</ul>
+{% endblock %}
